@@ -1,9 +1,31 @@
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
+
+
+const containerVariantss={
+  hidden:{
+   opacity:0,
+  },
+  visible:{
+    opacity:1,
+    transition:{
+       duration:1,
+       ease:'easeOut',
+        delay:0.5
+    }
+  }
+}
 
 function Hero() {
   return (
-    <div className="hero lg:min-h-[100vh] md:min-h-[80vh]  min-h-[100vh]  lg:px-10 mt-20 md:mt-10 ">
+    <motion.div
+      className="hero lg:min-h-[100vh] md:min-h-[80vh]  min-h-[100vh]  lg:px-10 mt-20 md:mt-10 "
+     variants={containerVariantss}
+     initial='hidden'
+     animate="visible"
+  
+    >
       <div className="hero-content flex-col lg:flex-row-reverse ">
         <div className="relative ">
           <img
@@ -35,18 +57,33 @@ function Hero() {
         <div>
           <div className="flex flex-row items-center gap-2">
             <p className="w-10 h-0.5 bg-gray-900 border"></p>
-            <p className="text-sm text-gray-400 ">
+            <motion.p
+              className="text-sm text-gray-400 "
+              initial={{ x: "-10vw" }}
+              animate={{ x: 0 }}
+              transition={{ duration: 1, ease: "easeOut", type:'spring',stiffness:120}}
+            >
               Beta Version of iLead For you{" "}
-            </p>
+            </motion.p>
           </div>
-          <h1 className="text-4xl lg:text-6xl font-bold text-black">
+          <motion.h1
+            className="text-4xl lg:text-6xl font-bold text-black"
+            initial={{ opacity: 0, x: "-10vw" }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut"}}
+          >
             I lead Session website here for you!
-          </h1>
-          <p className="py-6">
+          </motion.h1>
+          <motion.p
+            className="py-6"
+            initial={{ opacity: 0, x: "10vw" }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+          >
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
-          </p>
+          </motion.p>
 
           <div className="flex gap-4 items-center">
             <button className=" bg-blue-600 text-white hover:scale-110  transition-all px-8 py-2  rounded-2xl border border-blue-500 hover:cursor-pointer ring-offset-1 ring-gray-100 flex flex-row items-center gap-2 ">
@@ -71,7 +108,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

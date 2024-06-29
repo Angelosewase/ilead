@@ -55,7 +55,7 @@ export default function Footer() {
         <h1 className="text-lg font-semibold">Contact us</h1>
         </div>
       </div>
-      <div className=" px-2 md:px-10 flex items-center justify-center flex-col ">
+      <div className=" px-2  flex items-center justify-center flex-col ">
         <hr className="w-full bg-white opacity-10"/>
          <div className="w-full flex justify-between items-center text-xs font-extralight opacity-20 mt-5 ">
             <p>copyright &#169 2025 ILEAD .all rights reserved </p>
