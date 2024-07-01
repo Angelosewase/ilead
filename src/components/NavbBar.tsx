@@ -1,3 +1,7 @@
+// import { useNavigate } from "react-router-dom";
+
+import Logo from "./Logo";
+
 interface listItem {
   title: string;
   to: string;
@@ -18,6 +22,12 @@ const ListItem = ({ title, to }: listItem) => {
 };
 
 function NavbBar() {
+
+  // const navigate = useNavigate()
+  // function handleNavigation(){
+  //   navigate('/getStarted')
+  // }
+  
   return (
     <div>
       <div className="navbar bg-base-100 px-2 md:px-10 lg:px-40 py-4  shadow-md fixed top-0 right-0 left-0 z-20">
@@ -57,9 +67,7 @@ function NavbBar() {
               </li>
             </ul>
           </div>
-          <a className="text-3xl text-blue-600 font-bold">
-            <span className="text-red-800 -mr-1">I</span> LEAD
-          </a>
+      <Logo />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="flex flex-row gap-8 px-1 ">
@@ -71,7 +79,7 @@ function NavbBar() {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className=" bg-blue-600 hover:bg-gray-50 text-white transition-all px-8 py-1.5  rounded-3xl hover:text-blue-400 hover:border border-blue-500 hover:cursor-pointer ring-offset-1 ring-gray-100 ">
+          <a className=" bg-blue-600 hover:bg-gray-50 text-white transition-all px-8 py-1.5  rounded-3xl hover:text-blue-400 hover:border border-blue-500 hover:cursor-pointer ring-offset-1 ring-gray-100 " href="/getStarted">
             Join us
           </a>
         </div>
