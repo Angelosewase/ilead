@@ -45,7 +45,7 @@ function ViralNews() {
       <SectionHeader title="News" />
       <div className="flex-1 ">
         <h1 className="text-xl font-bold mb-10">Viral News</h1>
-        <div className="">
+        <div className="flex flex-col lg:flex-row gap-4">
           <div className=" w-full lg:w-[48%] ">
             <img
               src="./src/assets/Rectangle 23.png"
