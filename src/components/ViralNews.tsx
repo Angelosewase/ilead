@@ -52,7 +52,7 @@ function ViralNews() {
               alt=""
               className="h-[350px] w-full"
             />
-            <div className=" flex flex-col md:flex-row mt-4 gap-2">
+            <div className=" flex flex-col md:flex-row mt-4 gap-2">d
               <h1 className="text-lg font-bold flex-1">
                 Lorem ipsum dolor sit amet consectetur ,
               </h1>

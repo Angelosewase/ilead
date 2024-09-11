@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent,useState } from "react";
 import Logo from "../components/Logo";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid";
 function Login() {
@@ -64,7 +64,7 @@ export function PasswordInput() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const handlePasswordChange = (e:any) => {
+  const handlePasswordChange = (e:ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
 
